@@ -1,6 +1,6 @@
 ################################################################################
 # gae_python_gcm/urls.py
-# Greg Bayer <greg@pulse.me>
+# Greg Bayer <greg@gbayer.com>
 ################################################################################
 
 from django.conf.urls.defaults import patterns
