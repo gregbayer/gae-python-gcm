@@ -1,0 +1,9 @@
+queue:
+- name: gcm-retries
+  rate: 500/s
+  bucket_size: 100
+  retry_parameters:
+    min_backoff_seconds: 10
+    max_backoff_seconds: 4000
+    max_doublings: 8
+    task_age_limit: 1d

@@ -1,0 +1,15 @@
+application: gae-django-gcm
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: false
+
+builtins:
+- remote_api: on
+
+inbound_services:
+- warmup
+
+handlers:
+
+# Optional django handlers
