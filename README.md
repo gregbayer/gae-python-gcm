@@ -22,7 +22,7 @@ We prefer to keep everything in Python instead of using the [GCM server referanc
 ```python
 from gae_python_gcm.gcm import GCMMessage, GCMConnection
 
-gcm_message = GCMMessage(push_token, android_payload, android_collapse_id)
+gcm_message = GCMMessage(push_token, android_payload)
 gcm_conn = GCMConnection()
 gcm_conn.notify_device(gcm_message)
 ```
