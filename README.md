@@ -17,6 +17,16 @@ gae-python-gcm can be used with or without [Django](https://www.djangoproject.co
 
 We prefer to keep everything in Python instead of using the [GCM server referance implmentation](http://developer.android.com/google/gcm/demo.html) in Java.
 
+# Example
+
+```python
+from gae_python_gcm.gcm import GCMMessage, GCMConnection
+
+gcm_message = GCMMessage(push_token, android_payload, android_collapse_id)
+gcm_conn = GCMConnection()
+gcm_conn.notify_device(gcm_message)
+```
+
 # Getting started
 
 To add gae-python-gcm to your AppEngine project without Django:
@@ -25,9 +35,7 @@ To add gae-python-gcm to your AppEngine project without Django:
 2. Add entries to your app.yaml and queue.yaml based on included files.
 3. Copy the gae-python-gcm directory into your appengine project
 4. Make sure you set YOUR-GCM-API-KEY in /gae_python_gcm/gcm.py or in the settings module.
-5. Include "from gae_python_gcm.gcm import GCMMessage, GCMConnection" at the top of your python file
-6. Call create a GCMMessage and GCMConnection as in example.py
-7. Call notify_device() from the connection on the message.
+
 
 To add gae-python-gcm to your AppEngine project with Django:
 
@@ -35,9 +43,7 @@ To add gae-python-gcm to your AppEngine project with Django:
 2. Add entries to your app.yaml and queue.yaml based on included files.
 3. Copy the gae-python-gcm directory into your appengine project
 4. Configure your project as appropriate. You may find the urls.py and settings.py examples in the example_django_files directories useful. 
-4. Make sure you set YOUR-GCM-API-KEY in /gae_python_gcm/gcm.py or in the settings module.
-5. Include "from gae_python_gcm.gcm import GCMMessage, GCMConnection" at the top of your python file
-6. Call create a GCMMessage and GCMConnection as in example.py
-7. Call conn.notify_device() from the connection on the message.
+5. Make sure you set YOUR-GCM-API-KEY in /gae_python_gcm/gcm.py or in the settings module.
+
 
 
