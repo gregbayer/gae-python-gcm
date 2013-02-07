@@ -16,7 +16,7 @@ try:
 except ImportError:
     import simplejson as json
 
-from google.appengine.api.labs import taskqueue  ## Google App Engine specific
+from google.appengine.api import taskqueue  ## Google App Engine specific
 
 from django.core.cache import cache
 from django.utils import importlib
