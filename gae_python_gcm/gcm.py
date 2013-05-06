@@ -288,7 +288,7 @@ class GCMConnection:
             
             if e.code == 400:
                 logging.error('400, Invalid GCM JSON message: ' + repr(gcm_post_json_str))
-            if e.code == 401:
+            elif e.code == 401:
                 logging.error('401, Error authenticating with GCM. Retrying message. Might need to fix auth key!')
                 self._requeue_message(message)
             elif e.code == 500:
