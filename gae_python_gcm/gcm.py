@@ -269,7 +269,6 @@ class GCMConnection:
                             self.update_token(old_device_token, new_device_token)
                         except:
                             logging.exception('Error updating device token')
-                        return
                     
                     elif 'error' in result:
                         # Handle GCM error
@@ -279,7 +278,6 @@ class GCMConnection:
                             self._on_error(device_token, error_msg, message)
                         except:
                             logging.exception('Error handling GCM error: ' + repr(error_msg))
-                        return
                     
                     result_index += 1
                 
